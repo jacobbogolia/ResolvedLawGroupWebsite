@@ -1,0 +1,107 @@
+---
+// src/components/Header.astro
+---
+<header>
+  <div class="top-bar">
+    <div class="container">
+      <span>Located in Colorado Springs, Colorado</span>
+      <span class="divider">|</span>
+      <a href="#">Privacy Notice for Colorado Residents</a>
+      <div class="contact-info">
+        <span>Mon-Fri 9:00AM - 3:00PM</span>
+        <span class="divider">|</span>
+        <a href="mailto:consults@resolvedlawgroup.com">consults@resolvedlawgroup.com</a>
+        <span class="divider">|</span>
+        <a href="tel:7192560236">(719) 256-0236</a>
+      </div>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="/logo.svg" alt="Resolved Law Group Logo" />
+        <span>Resolved Law Group</span>
+      </a>
+      <div class="nav-links">
+        <a href="#">About Us</a>
+        <a href="#">Practice Areas</a>
+        <a href="#">Our Team</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .top-bar {
+    background-color: var(--night);
+    color: var(--pale-dogwood);
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .top-bar a {
+    color: var(--pale-dogwood);
+    text-decoration: none;
+  }
+
+  .top-bar a:hover {
+    text-decoration: underline;
+  }
+
+  .divider {
+    margin: 0 0.5rem;
+    opacity: 0.4;
+  }
+
+  .main-nav {
+    background-color: var(--brunswick);
+    padding: 1rem;
+  }
+
+  .main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .nav-links a:hover {
+    color: var(--sunset);
+  }
+</style>

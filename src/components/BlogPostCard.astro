@@ -1,0 +1,55 @@
+---
+// src/components/BlogPostCard.astro
+export interface Props {
+  title: string;
+  excerpt: string;
+  image: string;
+}
+
+const { title, excerpt, image } = Astro.props;
+---
+
+<div class="card">
+  <img src={image} alt="" />
+  <div class="content">
+    <h4>{title}</h4>
+    <p>{excerpt}</p>
+    <a href="#">Read More</a>
+  </div>
+</div>
+
+<style>
+  .card {
+    background-color: var(--seashell);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--caramel);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>

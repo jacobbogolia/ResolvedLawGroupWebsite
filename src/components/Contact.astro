@@ -1,0 +1,88 @@
+---
+// src/components/Contact.astro
+---
+<section class="contact">
+  <div class="container">
+    <div class="contact-info">
+      <h2>Get in Touch with Us</h2>
+      <p>
+        We're here to help. Reach out to us to schedule a consultation and learn how we can assist you with your legal needs.
+      </p>
+      <ul>
+        <li><strong>Address:</strong> 123 Legal Ave, Colorado Springs, CO</li>
+        <li><strong>Phone:</strong> (719) 256-0236</li>
+        <li><strong>Email:</strong> consults@resolvedlawgroup.com</li>
+      </ul>
+    </div>
+    <div class="contact-form">
+      <h3>Free Consultation</h3>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding: 4rem 2rem;
+    background-color: var(--seashell);
+  }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  .contact-form h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--pale-dogwood);
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: var(--caramel);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  button:hover {
+    background-color: #a56736;
+  }
+</style>

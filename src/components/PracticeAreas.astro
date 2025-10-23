@@ -1,0 +1,79 @@
+---
+// src/components/PracticeAreas.astro
+import PracticeAreaCard from './PracticeAreaCard.astro';
+
+const practiceAreas = [
+  {
+    title: 'Criminal Defense',
+    description: 'Aggressive representation for a wide range of criminal charges.',
+    icon: '/icons/criminal.svg', // Placeholder
+  },
+  {
+    title: 'Family Law',
+    description: 'Compassionate guidance through divorce, custody, and other family matters.',
+    icon: '/icons/family.svg', // Placeholder
+  },
+  {
+    title: 'Civil Protection Orders',
+    description: 'Protecting your rights and safety in civil protection order cases.',
+    icon: '/icons/protection.svg', // Placeholder
+  },
+  {
+    title: 'Child Custody',
+    description: 'Fighting for the best interests of your children.',
+    icon: '/icons/custody.svg', // Placeholder
+  },
+];
+---
+
+<section class="practice-areas">
+  <div class="container">
+    <h2>Legal Practice Areas</h2>
+    <div class="grid">
+      {practiceAreas.map(area => (
+        <PracticeAreaCard {...area} />
+      ))}
+    </div>
+    <a href="#" class="view-all-button">View All</a>
+  </div>
+</section>
+
+<style>
+  .practice-areas {
+    padding: 4rem 2rem;
+    background-color: var(--brunswick);
+  }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .view-all-button {
+    background-color: var(--caramel);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-all-button:hover {
+    background-color: #a56736; /* Darker caramel */
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+// src/components/TeamMemberCard.astro
+export interface Props {
+  name: string;
+  title: string;
+  image: string;
+}
+
+const { name, title, image } = Astro.props;
+---
+
+<div class="card">
+  <img src={image} alt={`Photo of ${name}`} />
+  <div class="info">
+    <h4>{name}</h4>
+    <p>{title}</p>
+  </div>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--seashell);
+    padding: 1.5rem;
+    border-radius: 5px;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  h4 {
+    margin-bottom: 0.25rem;
+  }
+</style>

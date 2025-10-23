@@ -1,0 +1,72 @@
+---
+// src/components/Blog.astro
+import BlogPostCard from './BlogPostCard.astro';
+
+const blogPosts = [
+  {
+    title: 'Understanding Your Rights During a Traffic Stop',
+    excerpt: 'It\'s important to know what to do and say if you are pulled over by the police. Here are some key things to remember.',
+    image: '/blog/traffic-stop.jpg', // Placeholder
+  },
+  {
+    title: 'Navigating Child Custody Battles: A Guide for Parents',
+    excerpt: 'Child custody cases can be emotionally taxing. This guide offers advice on how to navigate the process.',
+    image: '/blog/custody-battle.jpg', // Placeholder
+  },
+  {
+    title: 'The Importance of a Will and Estate Plan',
+    excerpt: 'Planning for the future is crucial. Learn why having a will and estate plan is essential for everyone.',
+    image: '/blog/estate-plan.jpg', // Placeholder
+  },
+];
+---
+
+<section class="blog">
+  <div class="container">
+    <h2>Latest News & Insights from Our Blog</h2>
+    <div class="grid">
+      {blogPosts.map(post => (
+        <BlogPostCard {...post} />
+      ))}
+    </div>
+    <a href="#" class="view-all-button">View All Posts</a>
+  </div>
+</section>
+
+<style>
+  .blog {
+    padding: 4rem 2rem;
+  }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .view-all-button {
+    background-color: var(--caramel);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color: 0.3s ease;
+  }
+
+  .view-all-button:hover {
+    background-color: #a56736; /* Darker caramel */
+  }
+</style>

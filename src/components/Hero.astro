@@ -1,0 +1,53 @@
+---
+// src/components/Hero.astro
+---
+<section class="hero">
+  <div class="hero-content">
+    <h1>Let's talk. We can help.</h1>
+    <p>
+      At Resolved Law Group, we understand that navigating the legal system can be overwhelming. That's why we're dedicated to providing our clients with the compassionate, experienced, and relentless representation they deserve.
+    </p>
+    <a href="#" class="cta-button">Schedule a Consultation</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background-color: var(--brunswick);
+    /* background-image: url('../assets/background.svg'); */
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 8rem 2rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    background-color: var(--hunyadi-golden);
+    color: var(--night);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: var(--sunset);
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+// src/components/Stats.astro
+---
+<section class="stats">
+  <div class="container">
+    <div class="stat">
+      <h3>Estates over $8 Million</h3>
+      <p>Successfully handled by our expert attorneys</p>
+    </div>
+    <div class="stat">
+      <h3>20% Dismissal Rate</h3>
+      <p>Achieved for our clients in the past year</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stats {
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 3rem 2rem;
+  }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .stat h3 {
+    font-size: 2rem;
+    color: var(--sunset);
+  }
+
+  .stat p {
+    font-size: 1rem;
+  }
+</style>

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Unna:wght@400;700&family=Area:wght@300;700&display=swap');
+
+:root {
+  /* Color Scheme */
+  --night: #051613;
+  --brunswick: #09342E;
+  --dark-green: #022C22;
+  --sunset: #FFD2A2;
+  --caramel: #C67B41;
+  --hunyadi-golden: #FFBC60;
+
+  /* Secondary Colors */
+  --sage: #A2A88B;
+  --reseda: #727D5B;
+  --feldgrau: #48594A;
+
+  /* Filler Colors */
+  --white: #FFFFFF;
+  --seashell: #F1F1F1;
+  --pale-dogwood: #DECCC8;
+  --dim-gray: #696969;
+
+  /* Fonts */
+  --font-main: 'Unna', serif;
+  --font-secondary: 'Area', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--white);
+  color: var(--night);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+}
