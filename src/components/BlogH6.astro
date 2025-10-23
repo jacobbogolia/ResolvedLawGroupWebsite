@@ -1,0 +1,20 @@
+---
+export interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+---
+
+<h6 class="blog-h6">{content}</h6>
+
+<style>
+  .blog-h6 {
+    font-family: var(--font-main);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--light-text);
+    margin: 0 0 32px 0;
+  }
+</style>
