@@ -4,104 +4,274 @@
 <header>
   <div class="top-bar">
     <div class="container">
-      <span>Located in Colorado Springs, Colorado</span>
-      <span class="divider">|</span>
-      <a href="#">Privacy Notice for Colorado Residents</a>
+      <div class="left-content">
+        <span>Located in Colorado Springs, Colorado</span>
+        <span class="divider">|</span>
+        <a href="#" class="privacy-link">Privacy Notice for Colorado Residents</a>
+      </div>
       <div class="contact-info">
-        <span>Mon-Fri 9:00AM - 3:00PM</span>
+        <div class="contact-item">
+          <svg class="icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 0C3.13 0 0 3.13 0 7s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7zm0 12.5c-3.03 0-5.5-2.47-5.5-5.5S3.97 1.5 7 1.5s5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5z"/>
+            <path d="M7 3.5c-.28 0-.5.22-.5.5v3c0 .28.22.5.5.5s.5-.22.5-.5V4c0-.28-.22-.5-.5-.5z"/>
+            <circle cx="7" cy="9" r=".5"/>
+          </svg>
+          <span>Mon-Fri 9:00AM - 3:00PM</span>
+        </div>
         <span class="divider">|</span>
-        <a href="mailto:consults@resolvedlawgroup.com">consults@resolvedlawgroup.com</a>
+        <div class="contact-item">
+          <svg class="icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M12.5 2H1.5C.67 2 0 2.67 0 3.5v7c0 .83.67 1.5 1.5 1.5h11c.83 0 1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm0 1L7 6.5 1.5 3h11zM1 10V4.5l5.5 3.5L1 10z"/>
+          </svg>
+          <a href="mailto:consults@resolvedlawgroup.com">consults@resolvedlawgroup.com</a>
+        </div>
         <span class="divider">|</span>
-        <a href="tel:7192560236">(719) 256-0236</a>
+        <div class="contact-item">
+          <svg class="icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M13.5 9.5c-.28 0-.5.22-.5.5v2c0 .28-.22.5-.5.5h-1c-.28 0-.5-.22-.5-.5V9c0-.28-.22-.5-.5-.5s-.5.22-.5.5v3c0 .28.22.5.5.5h1c.83 0 1.5-.67 1.5-1.5v-2c0-.28-.22-.5-.5-.5z"/>
+            <path d="M10.5 7c-.28 0-.5.22-.5.5v4c0 .28.22.5.5.5s.5-.22.5-.5v-4c0-.28-.22-.5-.5-.5z"/>
+            <path d="M7.5 5c-.28 0-.5.22-.5.5v6c0 .28.22.5.5.5s.5-.22.5-.5v-6c0-.28-.22-.5-.5-.5z"/>
+            <path d="M4.5 3c-.28 0-.5.22-.5.5v8c0 .28.22.5.5.5s.5-.22.5-.5v-8c0-.28-.22-.5-.5-.5z"/>
+            <path d="M1.5 1c-.28 0-.5.22-.5.5v10c0 .28.22.5.5.5s.5-.22.5-.5v-10c0-.28-.22-.5-.5-.5z"/>
+          </svg>
+          <a href="tel:7192560236">‪(719) 256-0236‬</a>
+        </div>
       </div>
     </div>
   </div>
   <nav class="main-nav">
     <div class="container">
       <a href="/" class="logo">
-        <img src="/logo.svg" alt="Resolved Law Group Logo" />
-        <span>Resolved Law Group</span>
+        <div class="logo-icon">
+          <svg width="54" height="54" viewBox="0 0 54 54" fill="none">
+            <circle cx="27" cy="27" r="27" fill="var(--main-accent-light)"/>
+            <path d="M27 8L32 18H37L29 23L32 33L27 28L22 33L25 23L17 18H22L27 8Z" fill="var(--main-content)"/>
+            <path d="M27 33L22 38H32L27 33Z" fill="var(--main-content)"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="firm-name">Resolved Law Group</span>
+          <span class="location">Colorado Springs</span>
+        </div>
       </a>
       <div class="nav-links">
+        <a href="#">Areas of Practice</a>
         <a href="#">About Us</a>
-        <a href="#">Practice Areas</a>
-        <a href="#">Our Team</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact Us</a>
+        <a href="#">The Team</a>
+        <a href="#">News & Insights</a>
+        <a href="#">Get in Touch</a>
       </div>
+      <a href="#" class="cta-button">
+        <span>Free Consultation</span>
+        <svg class="add-icon" width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="2"/>
+          <path d="M11 7v8M7 11h8" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </a>
     </div>
   </nav>
 </header>
 
 <style>
   .top-bar {
-    background-color: var(--night);
-    color: var(--pale-dogwood);
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    background-color: var(--main-content);
+    color: var(--background-shade);
+    padding: 7px 0;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: var(--font-secondary);
+    position: relative;
+    height: 34px;
+    display: flex;
+    align-items: center;
+  }
+
+  .top-bar::before {
+    content: '';
+    position: absolute;
+    top: -38px;
+    right: 0;
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(255, 199, 129, 0.1) 0%, transparent 70%);
+    border-radius: 25px;
+    overflow: hidden;
   }
 
   .top-bar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1240px;
-    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .left-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    fill: var(--background-shade);
   }
 
   .top-bar a {
-    color: var(--pale-dogwood);
-    text-decoration: none;
+    color: var(--background-shade);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: color 0.3s ease;
   }
 
   .top-bar a:hover {
-    text-decoration: underline;
+    color: var(--main-accent-light);
   }
 
   .divider {
-    margin: 0 0.5rem;
+    width: 1px;
+    height: 14px;
+    background-color: var(--background-shade);
     opacity: 0.4;
   }
 
   .main-nav {
-    background-color: var(--brunswick);
-    padding: 1rem;
+    background-color: var(--dark-background);
+    padding: 16px 0;
+    height: 86px;
+    display: flex;
+    align-items: center;
   }
 
   .main-nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1240px;
-    margin: 0 auto;
+    gap: 24px;
   }
 
   .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    color: var(--white);
+    gap: 10px;
+    color: var(--light-text);
     text-decoration: none;
-    font-family: var(--font-main);
-    font-size: 1.5rem;
+    transition: opacity 0.3s ease;
+    width: 164px;
   }
 
-  .logo img {
-    height: 50px;
+  .logo:hover {
+    opacity: 0.9;
+  }
+
+  .logo-icon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+  }
+
+  .firm-name {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--light-text);
+    line-height: 1.1;
+  }
+
+  .location {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--light-text);
+    opacity: 0.8;
   }
 
   .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 48px;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
   }
 
   .nav-links a {
-    color: var(--white);
+    color: var(--light-text);
     text-decoration: none;
     font-weight: 700;
+    font-size: 12px;
+    font-family: var(--font-secondary);
+    transition: color 0.3s ease;
   }
 
   .nav-links a:hover {
-    color: var(--sunset);
+    color: var(--main-accent-light);
+  }
+
+  .cta-button {
+    background-color: var(--main-content);
+    border: 1px solid var(--sunset);
+    border-radius: 5px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--main-accent-light);
+    font-weight: 700;
+    font-size: 12px;
+    font-family: var(--font-secondary);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .cta-button:hover {
+    background-color: var(--main-accent-light);
+    color: var(--main-content);
+  }
+
+  .add-icon {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1440px) {
+    .container {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    .top-bar .container {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    .contact-info {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 </style>

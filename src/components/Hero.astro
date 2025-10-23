@@ -2,52 +2,275 @@
 // src/components/Hero.astro
 ---
 <section class="hero">
-  <div class="hero-content">
-    <h1>Let's talk. We can help.</h1>
-    <p>
-      At Resolved Law Group, we understand that navigating the legal system can be overwhelming. That's why we're dedicated to providing our clients with the compassionate, experienced, and relentless representation they deserve.
-    </p>
-    <a href="#" class="cta-button">Schedule a Consultation</a>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-image">
+        <div class="image-container">
+          <div class="attorney-image">
+            <!-- Placeholder for attorney image -->
+            <div class="image-placeholder">
+              <div class="image-content">
+                <div class="attorney-silhouette"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-text">
+        <h1>Let's talk. We can help.</h1>
+        <p>
+          Life can be complicated. Everyone makes mistakes. That doesn't mean you have to stay stuck. Whatever your legal conundrum, by hiring our team, you're investing in professionals that yearn to help you towards the next chapter of your life as efficiently as possible. Too many attorneys boast about fighting tooth and nail for every inch, but the truth is, that often ends up costing you far more—in time, money, and peace of mind. We believe in working hard for what you want, but doing it the smart way. That's why we keep you informed every step of the way, so you're never left guessing or blindly following along.
+        </p>
+        <p>
+          If that sounds like your style, please fill out a consultation form and let's talk.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Free Consultation</a>
+          <a href="#" class="btn btn-secondary">About our Company</a>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- Decorative elements -->
+  <div class="blur-effect blur-right"></div>
+  <div class="blur-effect blur-left"></div>
+  <div class="pattern pattern-top"></div>
+  <div class="pattern pattern-bottom"></div>
+  <div class="texture-overlay"></div>
 </section>
 
 <style>
   .hero {
-    background-color: var(--brunswick);
-    /* background-image: url('../assets/background.svg'); */
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
-    padding: 8rem 2rem;
-    text-align: center;
+    background-color: var(--secondary-background);
+    color: var(--light-text);
+    padding: 96px 0;
+    min-height: 792px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
   }
 
   .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    gap: 244px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-image {
+    flex-shrink: 0;
+  }
+
+  .image-container {
+    width: 392px;
+    height: 600px;
+    position: relative;
+  }
+
+  .attorney-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 8px 8px 0px 0px var(--dark-background);
+    overflow: hidden;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2C1810 0%, #134A42 100%);
+    position: relative;
+  }
+
+  .image-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .attorney-silhouette {
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--main-accent-light) 0%, var(--sunset) 100%);
+    border-radius: 50%;
+    opacity: 0.3;
+    position: relative;
+  }
+
+  .attorney-silhouette::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: var(--light-text);
+    border-radius: 50%;
+    opacity: 0.2;
+  }
+
+  .attorney-silhouette::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 150px;
+    background: var(--light-text);
+    border-radius: 8px;
+    opacity: 0.2;
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: 604px;
   }
 
   .hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+    font-family: var(--font-main);
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 26px;
+    color: var(--light-text);
+    line-height: 1.1;
   }
 
   .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 37px;
+    color: var(--light-text);
+    line-height: 1.8;
   }
 
-  .cta-button {
-    background-color: var(--hunyadi-golden);
-    color: var(--night);
-    padding: 1rem 2rem;
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--sunset);
   }
 
-  .cta-button:hover {
-    background-color: var(--sunset);
+  .btn-primary {
+    background-color: transparent;
+    color: var(--main-content);
+    border-color: var(--sunset);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--main-accent-light);
+    color: var(--main-content);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--light-text);
+    border-color: var(--sunset);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--light-text);
+    color: var(--secondary-background);
+  }
+
+  /* Decorative elements */
+  .blur-effect {
+    position: absolute;
+    width: 646px;
+    height: 680px;
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .blur-right {
+    top: 29.04%;
+    right: -12.53%;
+    background: radial-gradient(circle, rgba(255, 199, 129, 0.2) 0%, transparent 70%);
+    border-radius: 25px;
+  }
+
+  .blur-left {
+    top: -21.59%;
+    left: 0.89%;
+    background: radial-gradient(circle, rgba(255, 199, 129, 0.15) 0%, transparent 70%);
+    border-radius: 25px;
+  }
+
+  .pattern {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .pattern-top {
+    top: -144px;
+    left: 101px;
+    background: radial-gradient(circle, rgba(255, 199, 129, 0.1) 0%, transparent 70%);
+    border-radius: 25px;
+  }
+
+  .pattern-bottom {
+    bottom: 457px;
+    right: 1644px;
+    background: radial-gradient(circle, rgba(255, 199, 129, 0.1) 0%, transparent 70%);
+    border-radius: 25px;
+  }
+
+  .texture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23FFC781" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23FFC781" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23FFC781" opacity="0.1"/><circle cx="10" cy="50" r="0.5" fill="%23FFC781" opacity="0.1"/><circle cx="90" cy="30" r="0.5" fill="%23FFC781" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    mix-blend-mode: soft-light;
+    opacity: 0.2;
+    z-index: 1;
+  }
+
+  @media (max-width: 1440px) {
+    .container {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+
+    .image-container {
+      width: 300px;
+      height: 400px;
+    }
   }
 </style>

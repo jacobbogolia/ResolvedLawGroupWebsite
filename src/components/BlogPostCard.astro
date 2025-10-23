@@ -2,54 +2,115 @@
 // src/components/BlogPostCard.astro
 export interface Props {
   title: string;
-  excerpt: string;
+  date: string;
   image: string;
+  excerpt?: string; // Make excerpt optional
 }
 
-const { title, excerpt, image } = Astro.props;
+const { title, date, image } = Astro.props;
 ---
 
 <div class="card">
-  <img src={image} alt="" />
+  <div class="image-section">
+    <div class="image-placeholder"></div>
+  </div>
   <div class="content">
     <h4>{title}</h4>
-    <p>{excerpt}</p>
-    <a href="#">Read More</a>
+    <div class="post-meta">
+      <span class="date">{date}</span>
+      <span class="read-more">Read More</span>
+    </div>
   </div>
 </div>
 
 <style>
   .card {
-    background-color: var(--seashell);
-    border-radius: 5px;
+    background-color: transparent;
+    border-radius: 8px;
     overflow: hidden;
+    display: flex;
+    gap: 8px;
+    width: 710px;
+    height: 190px;
   }
 
-  img {
+  .image-section {
+    width: 310px;
+    height: 190px;
+    background: linear-gradient(135deg, var(--secondary-background) 0%, var(--dark-background) 100%);
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .image-placeholder {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%;
+    background: linear-gradient(135deg, #2C1810 0%, #134A42 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .content {
-    padding: 1.5rem;
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   h4 {
-    margin-bottom: 0.5rem;
+    font-family: var(--font-secondary);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--light-text);
+    line-height: 1.35;
+    margin: 0;
+    flex: 1;
   }
 
-  p {
-    margin-bottom: 1rem;
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
   }
 
-  a {
-    color: var(--caramel);
-    text-decoration: none;
-    font-weight: 700;
+  .date {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--light-text);
   }
 
-  a:hover {
+  .read-more {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--light-text);
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+    }
+
+    .image-section {
+      width: 100%;
+      height: 200px;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    .post-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
   }
 </style>

@@ -4,85 +4,342 @@
 <section class="contact">
   <div class="container">
     <div class="contact-info">
+      <div class="subtitle">
+        <span>we want to help you</span>
+        <div class="subtitle-line"></div>
+      </div>
       <h2>Get in Touch with Us</h2>
       <p>
-        We're here to help. Reach out to us to schedule a consultation and learn how we can assist you with your legal needs.
+        The sooner you retain us, the sooner we can help. Want a quick divorce? Need advice from a domestic violence lawyer on a fast civil protection order? Let us help, tell us what the situation is. We'll return your inquiry as fast as we can.
       </p>
-      <ul>
-        <li><strong>Address:</strong> 123 Legal Ave, Colorado Springs, CO</li>
-        <li><strong>Phone:</strong> (719) 256-0236</li>
-        <li><strong>Email:</strong> consults@resolvedlawgroup.com</li>
-      </ul>
+      <div class="contact-details">
+        <p class="location">Located in Colorado Springs, Colorado</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <svg class="icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M13.5 9.5c-.28 0-.5.22-.5.5v2c0 .28-.22.5-.5.5h-1c-.28 0-.5-.22-.5-.5V9c0-.28-.22-.5-.5-.5s-.5.22-.5.5v3c0 .28.22.5.5.5h1c.83 0 1.5-.67 1.5-1.5v-2c0-.28-.22-.5-.5-.5z"/>
+              <path d="M10.5 7c-.28 0-.5.22-.5.5v4c0 .28.22.5.5.5s.5-.22.5-.5v-4c0-.28-.22-.5-.5-.5z"/>
+              <path d="M7.5 5c-.28 0-.5.22-.5.5v6c0 .28.22.5.5.5s.5-.22.5-.5v-6c0-.28-.22-.5-.5-.5z"/>
+              <path d="M4.5 3c-.28 0-.5.22-.5.5v8c0 .28.22.5.5.5s.5-.22.5-.5v-8c0-.28-.22-.5-.5-.5z"/>
+              <path d="M1.5 1c-.28 0-.5.22-.5.5v10c0 .28.22.5.5.5s.5-.22.5-.5v-10c0-.28-.22-.5-.5-.5z"/>
+            </svg>
+            <span>‪(719) 256-0236‬</span>
+          </div>
+          <div class="contact-item">
+            <svg class="icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M15.5 3H2.5C1.67 3 1 3.67 1 4.5v9c0 .83.67 1.5 1.5 1.5h13c.83 0 1.5-.67 1.5-1.5v-9c0-.83-.67-1.5-1.5-1.5zm0 1L9 8.5 2.5 4h13zM1 13V5.5l7.5 4.5L1 13z"/>
+            </svg>
+            <span>consults@resolvedlawgroup.com</span>
+          </div>
+          <div class="contact-item">
+            <svg class="icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M9 0C4.03 0 0 4.03 0 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/>
+              <path d="M9 4.5c-.28 0-.5.22-.5.5v3c0 .28.22.5.5.5s.5-.22.5-.5V5c0-.28-.22-.5-.5-.5z"/>
+              <circle cx="9" cy="11" r=".5"/>
+            </svg>
+            <span>Mon-Fri 9:00AM - 3:00PM</span>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="contact-form">
       <h3>Free Consultation</h3>
       <form>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
+        <div class="form-group">
+          <label>First and Last Name*</label>
+          <input type="text" name="name" placeholder="How should we call you?" required />
+        </div>
+        <div class="form-group">
+          <label>Email Address*</label>
+          <input type="email" name="email" placeholder="yourname@company.com" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number*</label>
+          <input type="tel" name="phone" placeholder="+1 123 456 7890" required />
+        </div>
+        <div class="form-group">
+          <label>Area of Expertise*</label>
+          <select name="expertise" required>
+            <option value="">Select</option>
+            <option value="criminal">Criminal Defense</option>
+            <option value="divorce">Divorce</option>
+            <option value="protection">Civil Protection Orders</option>
+            <option value="custody">Child Custody</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message / Inquiry*</label>
+          <textarea name="message" placeholder="How can we help you today?" required></textarea>
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" name="terms" id="terms" required />
+          <label for="terms">By sending this message I agree to Resolved's Law Group Terms & Conditions and Privacy Policy and I confirm that I read everything.</label>
+        </div>
         <button type="submit">Send Message</button>
       </form>
     </div>
   </div>
+  <!-- Decorative patterns -->
+  <div class="pattern pattern-left"></div>
+  <div class="pattern pattern-right"></div>
+  <div class="texture-overlay"></div>
 </section>
 
 <style>
   .contact {
-    padding: 4rem 2rem;
-    background-color: var(--seashell);
+    padding: 96px 0;
+    background-color: var(--main-content);
+    color: var(--light-text);
+    position: relative;
+    overflow: hidden;
   }
 
   .container {
-    max-width: 1240px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 392px 710px;
+    gap: 104px;
+    align-items: start;
+  }
+
+  .contact-info {
+    max-width: 392px;
+  }
+
+  .subtitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle span {
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--light-text);
+  }
+
+  .subtitle-line {
+    width: 154px;
+    height: 1px;
+    background-color: var(--light-text);
+    opacity: 0.3;
   }
 
   h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-family: var(--font-main);
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--light-text);
+    line-height: 1.1;
+    margin-bottom: 32px;
   }
 
-  ul {
-    list-style: none;
-    padding: 0;
+  p {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-text);
+    line-height: 1.6;
+    margin-bottom: 32px;
   }
 
-  li {
-    margin-bottom: 1rem;
+  .contact-details {
+    max-width: 346px;
+  }
+
+  .location {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-text);
+    margin-bottom: 16px;
+  }
+
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    fill: var(--light-text);
+  }
+
+  .contact-item span {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-text);
+  }
+
+  .contact-form {
+    max-width: 710px;
   }
 
   .contact-form h3 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-family: var(--font-secondary);
+    font-size: 63px;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 24px;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  .form-group {
+    margin-bottom: 24px;
   }
 
-  input, textarea {
+  .form-group label {
+    display: block;
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--light-text);
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
     width: 100%;
-    padding: 1rem;
-    border: 1px solid var(--pale-dogwood);
+    padding: 24px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+    color: var(--light-text);
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--main-accent-light);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .form-group textarea {
+    height: 204px;
+    resize: vertical;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .checkbox-group label {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-text);
+    line-height: 1.6;
+    margin: 0;
   }
 
   button {
-    background-color: var(--caramel);
-    color: var(--white);
-    padding: 1rem;
-    border: none;
+    background-color: transparent;
+    color: var(--light-text);
+    padding: 12px 24px;
+    border: 1px solid var(--sunset);
     border-radius: 5px;
-    cursor: pointer;
+    font-family: var(--font-secondary);
+    font-size: 14px;
     font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
   }
 
   button:hover {
-    background-color: #a56736;
+    background-color: var(--main-accent-light);
+    color: var(--main-content);
+  }
+
+  /* Decorative patterns */
+  .pattern {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .pattern-left {
+    top: 736px;
+    right: 1600px;
+    background: radial-gradient(circle, rgba(255, 199, 129, 0.1) 0%, transparent 70%);
+    border-radius: 25px;
+  }
+
+  .pattern-right {
+    top: -212px;
+    left: -204px;
+    background: radial-gradient(circle, rgba(255, 199, 129, 0.1) 0%, transparent 70%);
+    border-radius: 25px;
+  }
+
+  .texture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23FFC781" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23FFC781" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23FFC781" opacity="0.1"/><circle cx="10" cy="50" r="0.5" fill="%23FFC781" opacity="0.1"/><circle cx="90" cy="30" r="0.5" fill="%23FFC781" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    mix-blend-mode: soft-light;
+    opacity: 0.2;
+    z-index: 1;
+  }
+
+  @media (max-width: 1440px) {
+    .container {
+      padding: 0 2rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    .contact-form h3 {
+      font-size: 2rem;
+    }
+
+    .checkbox-group {
+      flex-direction: column;
+      gap: 8px;
+    }
   }
 </style>

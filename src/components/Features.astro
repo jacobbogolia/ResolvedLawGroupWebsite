@@ -1,0 +1,125 @@
+---
+// src/components/Features.astro
+---
+
+<section class="features">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="56" height="54" viewBox="0 0 56 54" fill="none">
+            <path d="M28 0L35 20H55L38 32L45 52L28 40L11 52L18 32L1 20H21L28 0Z" fill="var(--main-accent-light)"/>
+            <rect x="20" y="35" width="16" height="4" rx="2" fill="var(--main-accent-light)"/>
+            <rect x="20" y="42" width="16" height="4" rx="2" fill="var(--main-accent-light)"/>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <h3>Professional Competence through Accreditation.</h3>
+          <div class="separator"></div>
+          <p>Above flying rock-cake bathroom mimbletonia die mr catherine. 9¾ kittens steak bertie us woes crush floating.</p>
+        </div>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="54" height="45" viewBox="0 0 54 45" fill="none">
+            <circle cx="27" cy="22.5" r="20" stroke="var(--main-accent-light)" stroke-width="4"/>
+            <path d="M20 22.5L24 26.5L34 16.5" stroke="var(--main-accent-light)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <h3>Confidential Meetings and Consultation Process.</h3>
+          <div class="separator"></div>
+          <p>Boggarts red daisies sirius grayback floor fanged kedavra lily. Smile grim floo pie wand floo moon juice us levicorpus.</p>
+        </div>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="54" height="40" viewBox="0 0 54 40" fill="none">
+            <rect x="5" y="15" width="44" height="25" rx="4" stroke="var(--main-accent-light)" stroke-width="3"/>
+            <path d="M15 25L20 30L35 15" stroke="var(--main-accent-light)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="27" cy="10" r="8" stroke="var(--main-accent-light)" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="feature-content">
+          <h3>Legal Protection and Top Priority on your Personal Rights.</h3>
+          <div class="separator"></div>
+          <p>Full cottage goblin bathrooms points lupin pigwidgeon impedimenta leg petrified. We spine hippogriffs keeper.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    background-color: var(--secondary-background);
+    padding: 96px 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    background-color: transparent;
+    padding: 32px;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  .feature-icon {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .feature-content h3 {
+    font-family: var(--font-secondary);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 24px;
+    line-height: 1.35;
+  }
+
+  .separator {
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-text);
+    opacity: 0.3;
+    margin-bottom: 24px;
+  }
+
+  .feature-content p {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-text);
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 1440px) {
+    .container {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    
+    .feature-card {
+      padding: 24px;
+    }
+  }
+</style>

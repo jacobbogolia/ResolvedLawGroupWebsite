@@ -3,47 +3,140 @@
 export interface Props {
   title: string;
   description: string;
-  icon: string; // Path to icon
+  icon: string; // Emoji or icon
 }
 
 const { title, description, icon } = Astro.props;
 ---
 
 <div class="card">
-  <img src={icon} alt="" class="icon" />
-  <h3>{title}</h3>
-  <p>{description}</p>
-  <a href="#">Learn More</a>
+  <div class="image-section">
+    <div class="image-placeholder">
+      <div class="icon">{icon}</div>
+    </div>
+  </div>
+  <div class="content-section">
+    <h3>{title}</h3>
+    <div class="separator"></div>
+    <p>{description}</p>
+    <a href="#" class="card-link">
+      <span>Book a Consultation</span>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="2"/>
+        <path d="M11 7v8M7 11h8" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </a>
+  </div>
 </div>
 
 <style>
   .card {
-    background-color: var(--seashell);
-    padding: 2rem;
-    border-radius: 5px;
-    text-align: center;
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 392px;
+    height: 577px;
+    position: relative;
+  }
+
+  .image-section {
+    width: 100%;
+    height: 230px;
+    position: relative;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--secondary-background) 0%, var(--dark-background) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 
   .icon {
-    height: 50px;
-    margin-bottom: 1rem;
+    font-size: 24px;
+    color: var(--light-text);
+    opacity: 0.6;
+  }
+
+  .content-section {
+    padding: 32px;
+    height: calc(100% - 230px);
+    display: flex;
+    flex-direction: column;
   }
 
   h3 {
-    margin-bottom: 1rem;
+    font-family: var(--font-secondary);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 16px;
+    line-height: 1.35;
+  }
+
+  .separator {
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-text);
+    opacity: 0.3;
+    margin-bottom: 16px;
   }
 
   p {
-    margin-bottom: 1.5rem;
+    color: var(--light-text);
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex: 1;
   }
 
-  a {
-    color: var(--caramel);
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--light-text);
     text-decoration: none;
     font-weight: 700;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid var(--sunset);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: fit-content;
   }
 
-  a:hover {
-    text-decoration: underline;
+  .card-link:hover {
+    background-color: var(--main-accent-light);
+    color: var(--main-content);
+  }
+
+  .card-link svg {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+      height: auto;
+    }
+
+    .image-section {
+      height: 200px;
+    }
+
+    .content-section {
+      height: auto;
+      padding: 24px;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
   }
 </style>
