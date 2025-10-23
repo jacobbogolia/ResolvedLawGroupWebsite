@@ -1,0 +1,258 @@
+---
+// AboutContent component for the About page
+---
+
+<section class="about-content">
+  <div class="container">
+    <div class="content-wrapper">
+      <div class="content-image">
+        <div class="image-placeholder">
+          <div class="placeholder-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <p class="placeholder-text">Photo with Resolved Team Working</p>
+        </div>
+      </div>
+      
+      <div class="content-text">
+        <div class="title-section">
+          <div class="top-subtitle">
+            <span class="subtitle-text">Streamlined & informed</span>
+            <div class="subtitle-line"></div>
+          </div>
+          <h2 class="main-title">Quick, Simple, Straightforward : No B.S.</h2>
+        </div>
+        
+        <div class="content-description">
+          <p>Law is complicated, full stop. What some fail to realize, is the concepts lying beneath the layers of procedure, and dates, and scheduling, and case law, and etc, and etc, are very simple and straightforward concepts. Resolved Law attorneys pride themselves on boiling down your individual case to these simple and straightforward issues so YOU can make and informed decision about YOUR case.</p>
+          
+          <p>&nbsp;</p>
+          
+          <p>It's your life, not ours. We are here to serve you. Only you can decide if moving forward with your case is going to be worth it or not. There are few guarantees in life, particularly in the court of law. Did the judge get good sleep last night? Did the prosecutor even read your case? Will the jury think your outfit is smart or cheap? Our job is to weigh all of these uncertainties and get your the information in a way you can understand, digest, and act on so you are confident that YOUR decision on how to treat YOUR case is the best.</p>
+          
+          <p>&nbsp;</p>
+          
+          <p>While we hope nobody has to ever hire a criminal defense or family law attorney, life is complicated. Our sole objective is to treat your case in a way that make you want to recommend us to everyone you know and then some. Sometimes that means going all the way to trial, but sometimes that means taking the first deal offered. While that can mean less revenue for our business, we believe that in the long run that the best representation means we'll get the best clients. Better clients follow our advice more often and therefore get better results. Does this sound like you? If so, we'd love to learn more about your case.</p>
+        </div>
+        
+        <div class="verification-points">
+          <div class="verification-item">
+            <div class="checkmark-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="2"/>
+                <path d="M6 10l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="verification-text">12 Specialised Civil Law Attorneys</span>
+          </div>
+          
+          <div class="verification-divider"></div>
+          
+          <div class="verification-item">
+            <div class="checkmark-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="2"/>
+                <path d="M6 10l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="verification-text">Over 58 years of Team Experience in the niche</span>
+          </div>
+          
+          <div class="verification-divider"></div>
+          
+          <div class="verification-item">
+            <div class="checkmark-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="2"/>
+                <path d="M6 10l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="verification-text">Free Consultation for your case</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-content {
+    background-color: var(--dark-background);
+    padding: 96px 0;
+  }
+
+  .container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+
+  .content-wrapper {
+    display: flex;
+    gap: 138px;
+    align-items: center;
+  }
+
+  .content-image {
+    flex: 0 0 498px;
+    height: 600px;
+  }
+
+  .image-placeholder {
+    background-color: var(--main-content);
+    border-radius: 5px;
+    box-shadow: 8px 8px 0px 0px var(--dark-background);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .placeholder-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--light-text);
+    margin-bottom: 16px;
+  }
+
+  .placeholder-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-main);
+    font-size: 50px;
+    color: var(--light-text);
+    opacity: 0.2;
+    text-align: center;
+    width: 420px;
+    line-height: 1.25;
+  }
+
+  .content-text {
+    flex: 1;
+    max-width: 604px;
+  }
+
+  .title-section {
+    margin-bottom: 32px;
+  }
+
+  .top-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle-text {
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--main-accent-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle-line {
+    width: 177px;
+    height: 1px;
+    background-color: var(--main-accent-light);
+    opacity: 0.4;
+  }
+
+  .main-title {
+    font-family: var(--font-main);
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--light-text);
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .content-description {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: 32px;
+  }
+
+  .content-description p {
+    margin: 0 0 16px 0;
+  }
+
+  .verification-points {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .verification-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .checkmark-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--main-accent-light);
+    flex-shrink: 0;
+  }
+
+  .verification-text {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--main-accent-light);
+    line-height: 1.8;
+  }
+
+  .verification-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-accent-light);
+    opacity: 0.4;
+  }
+
+  @media (max-width: 1440px) {
+    .container {
+      padding: 0 2rem;
+    }
+    
+    .content-wrapper {
+      gap: 2rem;
+    }
+    
+    .main-title {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .content-image {
+      flex: none;
+      height: 300px;
+    }
+    
+    .main-title {
+      font-size: 32px;
+    }
+    
+    .placeholder-text {
+      font-size: 24px;
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
+</style>
