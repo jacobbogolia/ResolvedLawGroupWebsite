@@ -1,0 +1,208 @@
+---
+// TeamContentSection component for the team page
+---
+
+<section class="team-content">
+  <div class="container">
+    <div class="content-wrapper">
+      <div class="team-image">
+        <div class="image-container">
+          <div class="image-placeholder">
+            <div class="placeholder-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <p class="image-text">Photo with Resolved Team Working</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="team-text">
+        <div class="subtitle">
+          <span>Hippogriff feint us cannot</span>
+          <div class="subtitle-line"></div>
+        </div>
+        <h2>Together as a Team we're Resolved Law Group</h2>
+        <div class="description">
+          <p>Shrieking flame lion seeker stone thirsty prophecies newt duel. Better points kidney die giant splinched minerva hand aragog shrieking. Bag pumpkin in seven cup goblin. Duel cabbage pear-tickle are bee spew wizard levicorpus.</p>
+          
+          <p>&nbsp;</p>
+          
+          <p>Hagrid tears grim do law snivellus bedroom portkey order plums. Fluffy got newt stone betrayal tweak. Doxycide knut snitch eeylops patronus. Sight maze scabbers wingardium umbrella pear-tickle black mudbloods.</p>
+        </div>
+        <a href="/about" class="cta-button">
+          More About our Firm
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-content {
+    background-color: var(--secondary-background);
+    padding: 0 0 96px 0;
+  }
+
+  .container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+
+  .content-wrapper {
+    display: flex;
+    gap: 138px;
+    align-items: center;
+  }
+
+  .team-image {
+    flex: 0 0 498px;
+    height: 600px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-placeholder {
+    background-color: var(--main-content);
+    border-radius: 5px;
+    box-shadow: 8px 8px 0px 0px var(--dark-background);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .placeholder-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--light-text);
+    margin-bottom: 16px;
+  }
+
+  .image-text {
+    font-family: var(--font-main);
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--light-text);
+    text-align: center;
+    opacity: 0.2;
+    line-height: 1.25;
+    max-width: 420px;
+  }
+
+  .team-text {
+    flex: 0 0 604px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .subtitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle span {
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--main-accent-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle-line {
+    width: 198px;
+    height: 1px;
+    background-color: var(--main-accent-light);
+    opacity: 0.4;
+  }
+
+  h2 {
+    font-family: var(--font-main);
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--light-text);
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .description {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--light-text);
+  }
+
+  .description p {
+    margin: 0 0 16px 0;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--sunset);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--main-content);
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+
+  .cta-button:hover {
+    background-color: var(--main-accent-light);
+    color: var(--main-content);
+  }
+
+  @media (max-width: 1440px) {
+    .container {
+      padding: 0 2rem;
+    }
+    
+    .content-wrapper {
+      gap: 4rem;
+    }
+    
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .team-image {
+      flex: none;
+      height: 300px;
+    }
+    
+    .team-text {
+      flex: none;
+    }
+    
+    h2 {
+      font-size: 32px;
+    }
+    
+    .image-text {
+      font-size: 24px;
+    }
+  }
+</style>

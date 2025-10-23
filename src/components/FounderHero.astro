@@ -1,0 +1,281 @@
+---
+// FounderHero component for the team page
+---
+
+<section class="founder-hero">
+  <div class="container">
+    <div class="founder-content">
+      <div class="founder-text">
+        <div class="subtitle">
+          <span>OG RLG</span>
+          <div class="subtitle-line"></div>
+        </div>
+        <h1>Meet the founder:<br>Katy Grace Kinney</h1>
+        <div class="biography">
+          <p>Hi, I'm Katy Grace Kinney—founder of Resolved Law Group. I am a career litigator, wife, mom to a kindergartener, and someone who's been training to argue in court since most people were still figuring out how to do their own laundry.</p>
+          
+          <p>&nbsp;</p>
+          
+          <p>I've been practicing law professionally since 2015. My journey started in Los Angeles, working in the Major Crimes Unit at the L.A. District Attorney's Office. I had the once-in-a-career experience of assisting John Lewin—legendary prosecutor and head of the Cold Case Unit—on the Robert Durst murder trial, organizing decades of discovery materials that spanned multiple states, multiple decades, and yes—even some moldy boxes.</p>
+          
+          <p>&nbsp;</p>
+          
+          <p>I then externed at the California Court of Appeal under Presiding Justice Dennis Perluss, where I learned the power of persuasive writing and what it takes to stand up to appellate scrutiny. That background informs every motion I file and every record I build.</p>
+          
+          <p>&nbsp;</p>
+          
+          <p>Eventually, I found employment in Colorado Springs within the District Attorney's Office. I took all the skills I'd been developing and put them to the test as a Deputy District Attorney who was fearless of trial. In fact, I litigated 25 jury trials in 4 years including attempted homicide, kidnapping, and domestic violence, some of these cases spanning 16 months. I learned to win without a single cooperative witness, to think on my feet, and to outwork anyone in the room.</p>
+          
+          <p>&nbsp;</p>
+          
+          <p>After that, I moved into private practice and never looked back. These days, I represent real people in criminal defense, family law, and civil protection orders. My clients are facing real consequences—jail time, losing custody, protecting themselves from abuse or false allegations—and I'm proud to stand between them and the worst-case scenario. Sometimes, we even get to celebrate results that are BEST-case scenario.</p>
+        </div>
+        <a href="/practice-areas" class="cta-button">
+          Legal Services we offer
+        </a>
+      </div>
+      
+      <div class="founder-image">
+        <div class="image-container">
+          <div class="image-placeholder">
+            <div class="placeholder-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <p class="image-text">Photo with Kate Grace Kinney, Founder of Firm</p>
+          </div>
+          <div class="signature">
+            <h3 class="signature-name">Katy Grace Kinney</h3>
+            <p class="signature-title">FOUNDER, RESOLVED LAW GROUP</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .founder-hero {
+    background-color: var(--secondary-background);
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .founder-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 80% 20%, rgba(255, 199, 129, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(255, 199, 129, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+    z-index: 1;
+  }
+
+  .founder-content {
+    display: flex;
+    gap: 138px;
+    align-items: center;
+  }
+
+  .founder-text {
+    flex: 0 0 604px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .subtitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle span {
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--main-accent-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .subtitle-line {
+    width: 48px;
+    height: 1px;
+    background-color: var(--main-accent-light);
+    opacity: 0.4;
+  }
+
+  h1 {
+    font-family: var(--font-main);
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--light-text);
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .biography {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--light-text);
+  }
+
+  .biography p {
+    margin: 0 0 16px 0;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--sunset);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--main-content);
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+  }
+
+  .cta-button:hover {
+    background-color: var(--main-accent-light);
+    color: var(--main-content);
+  }
+
+  .founder-image {
+    flex: 0 0 498px;
+    height: 600px;
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-placeholder {
+    background-color: var(--main-content);
+    border-radius: 5px;
+    box-shadow: 8px 8px 0px 0px var(--dark-background);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .placeholder-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--light-text);
+    margin-bottom: 16px;
+  }
+
+  .image-text {
+    font-family: var(--font-main);
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--light-text);
+    text-align: center;
+    opacity: 0.2;
+    line-height: 1.25;
+    max-width: 420px;
+  }
+
+  .signature {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .signature-name {
+    font-family: 'Cherolina', serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--main-accent-light);
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .signature-title {
+    font-family: var(--font-secondary);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--main-accent-light);
+    opacity: 0.6;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  @media (max-width: 1440px) {
+    .container {
+      padding: 0 2rem;
+    }
+    
+    .founder-content {
+      gap: 4rem;
+    }
+    
+    h1 {
+      font-size: 48px;
+    }
+    
+    .signature-name {
+      font-size: 48px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .founder-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .founder-text {
+      flex: none;
+    }
+    
+    .founder-image {
+      flex: none;
+      height: 300px;
+    }
+    
+    h1 {
+      font-size: 36px;
+    }
+    
+    .signature-name {
+      font-size: 36px;
+    }
+    
+    .image-text {
+      font-size: 24px;
+    }
+  }
+</style>
