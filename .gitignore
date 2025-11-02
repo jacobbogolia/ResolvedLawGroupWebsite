@@ -1,17 +1,21 @@
 # build output
 dist/
-
-# generated types
-.astro/
+.output/
+.json/
 
 # dependencies
 node_modules/
+
+.unlighthouse
 
 # logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+yarn.lock
+package-lock.json
+
 
 # environment variables
 .env
@@ -20,5 +24,9 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# jetbrains setting folder
-.idea/
+# ignore .astro directory
+.astro
+
+# Local Netlify folder
+.netlify
+.vercel
