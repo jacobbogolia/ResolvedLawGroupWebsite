@@ -188,27 +188,84 @@
         </div>
     </section>
 
-    <h5>We want to help you</h5>
-    <h2>Get in Touch with Us</h2>
-    <p>The sooner you retain us, the sooner we can help. Want a quick divorce? Need advice from a domestic violence lawyer on a fast civil protection order? Let us help, tell us what the situation is. We’ll return your inquiry as fast as we can.</p>
-
-    <p>Located in Colorado Springs, Colorado</p>
-    <p>Phone: (719) 256-0236</p>
-    <p>Email: consults@resolvedlawgroup.com</p>
-    <p>Mon-Fri 9:00AM - 3:00PM</p>
-
-    <h3>Free Consultation</h3>
-    <label for="name">First and Last Name</label>
-    <input type="text" id="name" name="name" placeholder="How should we call you?">
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" placeholder="yourname@company.com">
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" placeholder="(719) 123-4567">
-    <label for="message">Message / Inquiry</label>
-    <textarea id="message" name="message" placeholder="How can we help you today?"></textarea>
-    <input type="checkbox" id="checkbox" name="checkbox" required>
-    <label for="checkbox">By sending this message I agree to Resolved's Law Group Terms & Conditions and Privacy Policy and I confirm that I have read everything.</label>
-    <button>Send Message</button>
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h5 class="contact-label">WE WANT TO HELP YOU</h5>
+                <h2 class="contact-title">Get in Touch<br>with Us</h2>
+                <p class="contact-description">The sooner you retain us, the sooner we can help. Want a quick divorce? Need advice from a domestic violence lawyer on a fast civil protection order? Let us help, tell us what the situation is. We'll return your inquiry as fast as we can.</p>
+                
+                <p class="contact-location">Located in Colorado Springs, Colorado</p>
+                
+                <div class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 16.92V19.92C22 20.9801 21.5786 21.99 20.8394 22.73C20.1002 23.47 19.0902 23.89 18.03 23.89C7.81 23.89 0.109999 16.19 0.109999 5.97C0.109999 4.91 0.530199 3.9 1.2702 3.16C2.0102 2.42 3.01999 2 4.07999 2H7.07999C7.73999 2.00026 8.36005 2.29447 8.77005 2.80006C9.18005 3.30564 9.34005 3.96288 9.20999 4.59L8.20999 8.58C8.08003 9.211 7.66597 9.74891 7.08597 10.039C6.50597 10.3291 5.82597 10.3389 5.23999 10.065L3.53999 9.37C2.68999 11.84 4.17999 14.32 6.64999 15.18L7.34999 16.88C7.62397 17.4659 7.61391 18.146 7.32391 18.726C7.03391 19.306 6.496 19.7201 5.865 19.85L4.865 20.15C8.025 22.69 12.41 23.28 16.09 21.28C19.77 19.28 22 15.52 22 11.92V8.92C22 7.86 21.58 6.85 20.84 6.11C20.1 5.37 19.09 4.95 18.03 4.95H15.03" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="tel:7192560236" class="contact-link">(719) 256-0236</a>
+                </div>
+                
+                <div class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 6L12 13L2 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="mailto:consults@resolvedlawgroup.com" class="contact-link">consults@resolvedlawgroup.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 6V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="contact-link">Mon-Fri 9:00AM - 3:00PM</span>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <h3 class="form-title">Free Consultation</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">First and Last Name*</label>
+                        <input type="text" id="name" name="name" placeholder="How should we call you?" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" placeholder="yourname@company.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 123 456 7890" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="expertise">Area of Expertise*</label>
+                        <select id="expertise" name="expertise" required>
+                            <option value="">Select</option>
+                            <option value="criminal-defense">Criminal Defense</option>
+                            <option value="divorce">Divorce</option>
+                            <option value="civil-protection-orders">Civil Protection Orders</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message / Inquiry*</label>
+                        <textarea id="message" name="message" placeholder="How can we help you today?" required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="checkbox" name="checkbox" required>
+                        <label for="checkbox" class="checkbox-label">By sending this message I agree to Resolved's Law Group <strong>Terms & Conditions</strong> and <strong>Privacy Policy</strong> and I confirm that I read everything.</label>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
 
 </body>
