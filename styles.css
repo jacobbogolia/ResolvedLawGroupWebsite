@@ -1,0 +1,27 @@
+/* globals */
+body {
+    font-family: 'Area', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #051613;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Unna', serif;
+    font-weight: 700;
+}
+
+/* hero section */
+.hero {
+    background-color: #134A42;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
