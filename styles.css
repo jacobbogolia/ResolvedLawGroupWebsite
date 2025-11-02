@@ -231,3 +231,144 @@ h1, h2, h3, h4, h5, h6 {
         padding: 2rem 1.5rem;
     }
 }
+
+/* residing in colorado springs section */
+.residing-section {
+    display: flex;
+    min-height: 600px;
+    background-color: #134A42;
+}
+
+.residing-content {
+    flex: 1;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.residing-label {
+    font-family: 'Area', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #D4AF37;
+    margin: 0;
+}
+
+.residing-title {
+    font-family: 'Unna', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.residing-text {
+    font-family: 'Area', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #fff;
+    margin: 0;
+}
+
+.residing-button {
+    background-color: #E0A850;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-family: 'Area', sans-serif;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+.residing-button:hover {
+    background-color: #FEBC60;
+}
+
+.residing-image {
+    flex: 1;
+    position: relative;
+    background-image: url('background_imgs/building_w_pattern.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+}
+
+.residing-logo {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    background-color: #FFC781;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    min-width: 150px;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.logo-text {
+    font-family: 'Area', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+.logo-subtext {
+    font-family: 'Area', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Responsive residing section */
+@media (max-width: 968px) {
+    .residing-section {
+        flex-direction: column;
+    }
+
+    .residing-content {
+        padding: 3rem 2rem;
+    }
+
+    .residing-image {
+        min-height: 400px;
+    }
+
+    .residing-logo {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .residing-title {
+        font-size: 2rem;
+    }
+
+    .residing-content {
+        padding: 2rem 1.5rem;
+    }
+}
