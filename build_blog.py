@@ -45,15 +45,47 @@ def parse_markdown_file(filepath):
     
     # Extract conclusion section
     conclusion = None
+    conclusion_text_raw = None
     conclusion_match = re.search(r'##\s+Conclusion\s*\n(.*?)$', content, re.DOTALL)
     if conclusion_match:
-        conclusion_text = conclusion_match.group(1).strip()
-        # Convert conclusion to HTML
-        conclusion = markdown.markdown(conclusion_text)
-        # Remove conclusion from main content
+        conclusion_text_raw = conclusion_match.group(1).strip()
+        # Remove conclusion from main content first
         content = re.sub(r'##\s+Conclusion\s*\n.*$', '', content, flags=re.DOTALL).strip()
     
-    # Extract first image URL
+    # Convert absolute file:// paths to relative paths
+    # Handle file:// paths in markdown image syntax
+    def convert_file_path(match):
+        alt_text = match.group(1)
+        full_path = match.group(2)
+        if full_path.startswith('file://'):
+            # Extract the path after file://
+            path_part = full_path[7:]  # Remove 'file://'
+            # Get the script directory to find relative path
+            script_dir = Path(__file__).parent
+            try:
+                # Convert to Path object and get relative path
+                abs_path = Path(path_part)
+                if abs_path.exists():
+                    # Get relative path from script directory
+                    rel_path = abs_path.relative_to(script_dir)
+                    # Convert to forward slashes and ensure it starts with ../
+                    rel_str = str(rel_path).replace('\\', '/')
+                    # If it's in imgs/ directory, make it ../imgs/filename
+                    if 'imgs/' in rel_str:
+                        # Extract just the filename
+                        filename = rel_path.name
+                        return f'![{alt_text}](../imgs/{filename})'
+                    return f'![{alt_text}](../{rel_str})'
+            except (ValueError, OSError):
+                # If path conversion fails, try to extract filename
+                filename = Path(path_part).name
+                return f'![{alt_text}](../imgs/{filename})'
+        return f'![{alt_text}]({full_path})'
+    
+    # Replace file:// paths in markdown image syntax
+    content = re.sub(r'!\[([^\]]*)\]\((file://[^)]+)\)', convert_file_path, content)
+    
+    # Extract first image URL (after path conversion)
     first_image = None
     image_match = re.search(r'!\[.*?\]\((.*?)\)', content)
     if image_match:
@@ -61,6 +93,44 @@ def parse_markdown_file(filepath):
     
     # Convert main content to HTML
     main_content_html = markdown.markdown(content)
+    
+    # Also fix any remaining file:// paths in the HTML output
+    def fix_html_image_paths(html_content):
+        soup = BeautifulSoup(html_content, 'html.parser')
+        script_dir = Path(__file__).parent
+        for img in soup.find_all('img'):
+            src = img.get('src', '')
+            if src.startswith('file://'):
+                path_part = src[7:]  # Remove 'file://'
+                try:
+                    abs_path = Path(path_part)
+                    if abs_path.exists():
+                        rel_path = abs_path.relative_to(script_dir)
+                        filename = rel_path.name
+                        if 'imgs' in str(rel_path):
+                            img['src'] = f'../imgs/{filename}'
+                        else:
+                            img['src'] = '../' + str(rel_path).replace('\\', '/')
+                    else:
+                        # Path doesn't exist, just extract filename
+                        filename = Path(path_part).name
+                        img['src'] = f'../imgs/{filename}'
+                except (ValueError, OSError):
+                    # If path conversion fails, extract filename
+                    filename = Path(path_part).name
+                    img['src'] = f'../imgs/{filename}'
+        return str(soup)
+    
+    main_content_html = fix_html_image_paths(main_content_html)
+    
+    # Process conclusion if it exists
+    if conclusion_text_raw:
+        # Convert file:// paths in conclusion markdown
+        conclusion_text = re.sub(r'!\[([^\]]*)\]\((file://[^)]+)\)', convert_file_path, conclusion_text_raw)
+        # Convert conclusion to HTML
+        conclusion_html = markdown.markdown(conclusion_text)
+        # Fix any remaining file:// paths in conclusion HTML
+        conclusion = fix_html_image_paths(conclusion_html)
     
     # Parse date for sorting (try to parse, but keep original format)
     sort_date = None
@@ -95,6 +165,11 @@ def generate_blog_post_html(template_path, post_data):
         template = f.read()
     
     soup = BeautifulSoup(template, 'html.parser')
+    
+    # Fix stylesheet path (posts are in blog/ subdirectory)
+    stylesheet_link = soup.find('link', rel='stylesheet')
+    if stylesheet_link and stylesheet_link.get('href') == 'styles.css':
+        stylesheet_link['href'] = '../styles.css'
     
     # Update title tag
     title_tag = soup.find('title')
@@ -137,6 +212,20 @@ def generate_blog_post_html(template_path, post_data):
                 if element.name:
                     conclusion_div.append(element)
             blog_content.append(conclusion_div)
+    
+    # Fix image paths in navigation and footer (posts are in blog/ subdirectory)
+    for img in soup.find_all('img'):
+        src = img.get('src', '')
+        if src.startswith('imgs/'):
+            img['src'] = '../' + src
+    
+    # Fix navigation links (posts are in blog/ subdirectory)
+    for link in soup.find_all('a'):
+        href = link.get('href', '')
+        if href == 'index.html' or href.startswith('index.html#'):
+            link['href'] = '../' + href
+        elif href == 'insights.html':
+            link['href'] = '../insights.html'
     
     return str(soup)
 
