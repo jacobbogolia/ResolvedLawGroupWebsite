@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-links a {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+    font-weight: 650;
     font-size: 1rem;
     color: #F8F5EE;
     text-decoration: none;
@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background-color: #FFC781;
+    background-color: #CA763A;
     color: #fff;
     border: none;
     padding: 1rem 2rem;
@@ -374,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-secondary {
     background-color: transparent;
     color: #fff;
-    border: 2px solid #fff;
+    border: 2px solid #FFC781;
     padding: 1rem 2rem;
     font-size: 1rem;
     font-family: 'Area', sans-serif;
@@ -418,16 +418,16 @@ h1, h2, h3, h4, h5, h6 {
 /* legal practice area cards */
 .practice-areas {
     padding: 3rem 2rem;
-    background-color: #134A42;
+    background-color: #09342E;
 }
 
 .practice-areas h5 {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #fff;
+    letter-spacing: 0.0em;
+    color: #FFC781;
     margin-bottom: 0.5rem;
 }
 
@@ -530,11 +530,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .residing-label {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #D4AF37;
+    letter-spacing: 0.0em;
+    color: #FFC781;
     margin: 0;
 }
 
@@ -549,7 +549,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .residing-text {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+    font-weight: 100;
     font-size: 1.1rem;
     line-height: 1.8;
     color: #fff;
@@ -558,7 +558,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .residing-button {
     background-color: #E0A850;
-    color: #fff;
+    color: #051613;
     border: none;
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -655,7 +655,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* testimonials section */
 .testimonials-section {
-    background-color: #134A42;
+    background-color: #09342E;
     background-image: url('background_imgs/testimonials_background.png');
     background-size: cover;
     background-position: center;
@@ -676,12 +676,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .testimonials-label {
-    font-family: 'Area', sans-serif;
-    font-weight: 300;
+ font-family: 'Area', sans-serif;
+    font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #F8F5EE;
+    letter-spacing: 0.0em;
+    color: #FFC781;
     margin: 0;
 }
 
@@ -818,7 +818,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333333;
+    color: #FFFFFF;
     transition: opacity 0.3s ease;
 }
 
@@ -841,7 +841,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 2px solid #333333;
+    border: 2px solid #FFFFFF;
     background: transparent;
     cursor: pointer;
     padding: 0;
@@ -890,6 +890,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .testimonial-header {
         flex-wrap: wrap;
+        align-items: center;
     }
     
     .testimonial-date {
