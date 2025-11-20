@@ -861,9 +861,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Area', sans-serif;
     font-weight: 300;
     font-size: 0.85rem;
-    color: #F8F5EE;
-    text-align: center;
-    margin: 2rem 0 0 0;
+    color: #666666;
+    text-align: right;
+    margin:  -4rem 5rem 0 0;
     line-height: 1.6;
 }
 
@@ -991,11 +991,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-label {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #F8F5EE;
+    letter-spacing: 0.0em;
+    color: #FFC781;
     margin: 0 0 0.5rem 0;
 }
 
@@ -1028,7 +1028,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 110%;
     height: 3px;
-    background-color: #FFC781;
+    background-color: #CA763A;
 }
 
 .blog-layout {
@@ -1298,11 +1298,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-label {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+      font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #fff;
+    letter-spacing: 0.0em;
+    color: #FFC781;
     margin: 0;
 }
 
