@@ -300,7 +300,7 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-color: #134A42;
     color: #fff;
-    padding: 4rem 2rem;
+    padding: 4rem 8rem;
     display: flex;
     gap: 3rem;
     align-items: center;
@@ -341,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-content p {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 1.1rem;
     line-height: 1.8;
     margin: 0;
