@@ -1528,7 +1528,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-logo {
     width: 100%;
-    max-width: 200px;
+    max-width: 350px;
     height: auto;
 }
 
@@ -1540,10 +1540,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-contact-heading {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.em;
     color: #F8F5EE;
     margin: 0;
 }
@@ -1570,7 +1570,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-contact-link {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 0.95rem;
     color: #F8F5EE;
     text-decoration: none;
@@ -1616,10 +1616,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-blog-heading {
     font-family: 'Area', sans-serif;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.em;
     color: #F8F5EE;
     margin: 0;
 }
