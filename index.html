@@ -56,7 +56,7 @@
 </nav>
 <section class="hero">
 <div class="hero-portrait">
-<img alt="Portrait" src="https://via.placeholder.com/400x500/2F5F4F/FFFFFF?text=Portrait"/>
+<img alt="Portrait" src="imgs\Katy Office Cropped.jpg"/>
 </div>
 <div class="hero-content">
 <h1>Let's talk.<br/>We can help.</h1>
@@ -70,12 +70,12 @@
 </div>
 </section>
 <section class="practice-areas">
-<h5>Residing in Colorado Springs</h5>
+<h5>Fields of Expertise</h5>
 <h2>Legal Practice Areas</h2>
 <div class="practice-cards">
 <div class="practice-card">
 <div class="practice-card-header">
-<img alt="Criminal Defense" src="https://via.placeholder.com/120x120/FFFFFF/09342E?text=⚖️"/>
+<img alt="Criminal Defense" src="imgs\Gavel Black Hand.jpg"/>
 </div>
 <div class="practice-card-content">
 <h3 class="practice-card-title">Criminal Defense</h3>
@@ -85,7 +85,7 @@
 </div>
 <div class="practice-card">
 <div class="practice-card-header">
-<img alt="Divorce" src="https://via.placeholder.com/120x120/FFFFFF/09342E?text=📋"/>
+<img alt="Divorce" src="imgs\Young woman mountain view.jpg"/>
 </div>
 <div class="practice-card-content">
 <h3 class="practice-card-title">Divorce</h3>
@@ -95,7 +95,7 @@
 </div>
 <div class="practice-card">
 <div class="practice-card-header">
-<img alt="Civil Protection Orders" src="https://via.placeholder.com/120x120/FFFFFF/09342E?text=🛡️"/>
+<img alt="Civil Protection Orders" src="imgs\Woman sitting mountains red hair.jpg"/>
 </div>
 <div class="practice-card-content">
 <h3 class="practice-card-title">Civil Protection Orders</h3>
@@ -206,7 +206,7 @@
 <section class="blog-section">
 <div class="blog-container">
 <h5 class="blog-label">Proudly Nerdy</h5>
-<h2 class="blog-title">Latest News &amp; Insights from our Blog</h2>
+<h2 class="blog-title">Latest News &amp; Insights</h2>
 <h5 class="featured-label">Featured Blog Insight</h5>
 <div class="blog-layout">
 <div class="featured-insight-container">
@@ -231,6 +231,7 @@
 </section>
 <section class="contact-section">
 <div class="contact-container">
+
 <div class="contact-info">
 <h5 class="contact-label">WE WANT TO HELP YOU</h5>
 <h2 class="contact-title">Get in Touch<br/>with Us</h2>
@@ -258,23 +259,27 @@
 </div>
 </div>
 <div class="contact-form-container">
-<form class="contact-form">
+<form class="contact-form" action="https://formspree.io/f/xblnkowb" method="POST">
 <h3 class="form-title">Free Consultation</h3>
+
 <div class="form-group">
 <label for="name">First and Last Name*</label>
-<input id="name" name="name" placeholder="How should we call you?" required="" type="text"/>
+<input id="name" name="name" placeholder="Legal Name" required type="text"/>
 </div>
+
 <div class="form-group">
 <label for="email">Email Address*</label>
-<input id="email" name="email" placeholder="yourname@company.com" required="" type="email"/>
+<input id="email" name="email" placeholder="yourname@company.com" required type="email"/>
 </div>
+
 <div class="form-group">
 <label for="phone">Phone Number*</label>
-<input id="phone" name="phone" placeholder="+1 123 456 7890" required="" type="tel"/>
+<input id="phone" name="phone" placeholder="+1 123 456 7890" required type="tel"/>
 </div>
+
 <div class="form-group">
 <label for="expertise">Area of Expertise*</label>
-<select id="expertise" name="expertise" required="">
+<select id="expertise" name="expertise" required>
 <option value="">Select</option>
 <option value="criminal-defense">Criminal Defense</option>
 <option value="divorce">Divorce</option>
@@ -282,15 +287,23 @@
 <option value="other">Other</option>
 </select>
 </div>
+
 <div class="form-group">
 <label for="message">Message / Inquiry*</label>
-<textarea id="message" name="message" placeholder="How can we help you today?" required=""></textarea>
+<textarea id="message" name="message" placeholder="How can we help you today?" required></textarea>
 </div>
+
 <div class="form-group checkbox-group">
-<input id="checkbox" name="checkbox" required="" type="checkbox"/>
-<label class="checkbox-label" for="checkbox">By sending this message I agree to Resolved's Law Group <strong>Terms &amp; Conditions</strong> and <strong>Privacy Policy</strong> and I confirm that I read everything.</label>
+<input id="checkbox" name="checkbox" required type="checkbox"/>
+<label class="checkbox-label" for="checkbox">
+By sending this message I agree to Resolved's Law Group <strong>Terms & Conditions</strong> and <strong>Privacy Policy</strong> and I confirm that I read everything.
+</label>
 </div>
+
 <button class="form-submit" type="submit">Send Message</button>
+</form>
+</div>
+
 </form>
 </div>
 </div>
