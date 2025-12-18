@@ -63,3 +63,12 @@ Plan: Host Website on GitHub Pages with Custom Domain
   2. Add the domain and follow the TXT record verification steps
 
   ---
+
+CHRISTIAN WHADDUP DOE
+Buttons that aren't working: 
+    1. "Free Consultation" button in the header of the webpage
+    2. "Free Consultation" button under the "Let's talk. We can help." on the main page
+    3. "About our Company" same section.
+    4. "Free Consultation" button in the footer of each page.
+ 
+    
